@@ -1,0 +1,11 @@
+# Comcast Copyright Violation HTTP Injection Removal
+#   by Hydranix
+#
+# The first filter injects a script just before the </head> part of every page that looks for Comcast's
+#   injected crap and deletes it.
+#
+# The second filter does a regex search for Comcast's injected script and removes it entirely
+#
+FILTER: Comcast-Injection
+s|</head>|<script type=\"text/javascript\">function comcast_injection_remover(){var comcrap = document.getElementById(\"comcast_content\");while(comcrap.firstChild){comcrap.removeChild(comcrap.firstChild);}comcrap.parentNode.removeChild(comcrap);}window.onload = comcast_injection_remover;</script>$0|
+s|<script.*\s*//\sComcast\sCable\sCommunications[\s\S]*e8f6b078-0f35-11de-85c5-efc5ef23aa1f[\s\S]*</script>|<!-- Comcast Injection Removed by Privoxy -->|
