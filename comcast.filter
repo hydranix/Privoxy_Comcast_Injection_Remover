@@ -7,5 +7,5 @@
 # The second filter does a regex search for Comcast's injected script and removes it entirely
 #
 FILTER: Comcast-Injection
+s|<script language=\"JavaScript\" type=\"text/javascript\">[\s\S]\/\/ Comcast Cable Communications[\s\S]+?</script>|<!-- Comcast Injection Removed by Privoxy  -->|
 s|</head>|<script type=\"text/javascript\">\nwindow.addEventListener(\"load\", function(){var div = document.getElementById(\"comcast_content\");if(div){while(div.firstChild){div.removeChild(div.firstChild);}div.parentNode.removeChild(div);}}, false);\n</script>\n$0|
-s|<script language=\"JavaScript\" type=\"text/javascript\">[\s\S]\/\/ Comcast Cable Communications[\s\S]+?</script>|<!-- Gay Comcast Injection Removed by Privoxy  -->|
