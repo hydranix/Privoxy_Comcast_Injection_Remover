@@ -8,8 +8,9 @@ Install the filter by dropping comcast.filter and comcast.action into privoxy's 
 
 For Windows save the files as comcast.filter.txt and comcast.action.txt
 
-Then add this line to privoxy's config file:
+Then add these lines to privoxy's config file:
 
+    actionsfile comcast.action
     filterfile comcast.filter
 
 # How it works
