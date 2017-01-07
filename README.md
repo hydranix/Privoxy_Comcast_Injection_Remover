@@ -15,7 +15,9 @@ Then add these lines to privoxy's config file:
 
 # How it works
 
-First privoxy will do a regex search of the pages HTML and if it matches the script injected by Comcast, it will compltetly remove it.
+When you set up Privoxy as an HTTP proxy, all incoming HTTP traffic will pass through it before reaching your browser.
+
+Privoxy will scan for and remove the script that Comcast injects into your web pages before they reach you.
 
 Then privoxy will inject a script into the page just before the `</head>` tag that executes once the page finishes loading.
 Our injected script searches the page for any of comcast's injected content and removes it if found, otherwise it does nothing.
