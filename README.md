@@ -1,3 +1,6 @@
+(This is outdated and no longer required as comcast discontinued the practice of injecting html into browsers AFAIK)
+
+
 # Privoxy Filter to Remove Comcast Injected Content
 A Privoxy filter and action file pair to remove Comcast's injected javascript entirely
 
