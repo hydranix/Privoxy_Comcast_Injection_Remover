@@ -1,4 +1,6 @@
-(This is outdated and no longer required as comcast discontinued the practice of injecting html into browsers AFAIK)
+(This may no longer be required as comcast no longer appears to be injecting javascript into non-https, non-comcast/xfinity web pages on my connection
+
+This may not be the situation for everybody, so this filter may still be of use to others)
 
 
 # Privoxy Filter to Remove Comcast Injected Content
